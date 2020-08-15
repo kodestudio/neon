@@ -14,7 +14,7 @@ GitHub: quocthinhvo
 Email: quocthinhvo0@gmail.com
 */
 
-var key = "value";
+var config_key = "value";
 
 // Name of org or owner repo
 // if url to repo = "https://www.github.com/kodestudio/neon" then parent = "kodestudio" and repo="neon"
