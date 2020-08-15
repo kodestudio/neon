@@ -16,6 +16,18 @@ Email: quocthinhvo0@gmail.com
 
 var key = "value";
 
-// Name of repository 
-var config_parent = "";
-var config_repo = "";
+// Name of org or owner repo
+// if url to repo = "https://www.github.com/kodestudio/neon" then parent = "kodestudio" and repo="neon"
+var config_parent = "kodestudio";
+var config_repo = "neon";
+
+// config type event load
+/*
+var config_issues = true;
+var config_isuecomment = true;
+var config_release = true;
+var config_push = true;
+var config_pull = true;
+*/
+// config of custom Data
+var config_customapi = "";
