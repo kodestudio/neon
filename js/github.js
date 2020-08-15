@@ -159,3 +159,18 @@ var GitHub_getStars = {
         return api.responseText;
     }
 }
+
+var GitHub_getContributors = {
+    code: function(){
+        var api = new XMLHttpRequest();
+        api.open("GET", "https://api.github.com/repos/" + parent_value + "/" + repo_value + "/contributors", false);
+        api.send(null);
+        return api.status;
+    },
+    text: function(){
+        var api = new XMLHttpRequest();
+        api.open("GET", "https://api.github.com/repos/" + parent_value + "/" + repo_value + "/contributors", false);
+        api.send(null);
+        return api.responseText;
+    }
+}
