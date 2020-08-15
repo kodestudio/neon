@@ -1,4 +1,4 @@
-# Neon - static site generator
+# Neon - static site generator (not sure)
 Tools to display the repository's (GitHub) events on a timeline.
 
 We don't know how to classify Neon. 
