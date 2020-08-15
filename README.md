@@ -1,5 +1,9 @@
 # Neon - static site generator
-Lib to build static website for display the repository's (GitHub) events on a timeline.
+Tools to display the repository's (GitHub) events on a timeline.
+
+We don't know how to classify Neon. 
+
+The most basic definition of Neon: is a tool to help you create websites. That site displays the latest information and events for your repository and sorts it on a timeline.
 
 Neon is develop in "dev" branch
 
@@ -28,13 +32,13 @@ Create new blank branch with following name "neon" and push all push all files i
 ### Step 3. Config Neon
 You need to change the parameters in Neon. All will be found in "js / config.js"
 ### Step 4. Enable Static Site in repository
-You can see official document [here](https://pages.github.com/).
+GitHub Page offical document [here](https://pages.github.com/).
 
 If at **Step 2** you do with *Case 1*: set the path for that Static Site to the "docs" folder.
 
 Else you set the branch for GitHub Page to Neon.
 ### Step 5. Enjoy with Neon ;)
-That all. You can see Neon word well.
+That all. You can see Neon works well.
 ## Task complete
 - Create Neon repository in GitHub.
 - Add Showdown library.
