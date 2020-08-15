@@ -144,3 +144,18 @@ var GitHub_getLanguages = {
         return api.responseText;
     }
 }
+
+var GitHub_getStars = {
+    code: function(){
+        var api = new XMLHttpRequest();
+        api.open("GET", "https://api.github.com/repos/" + parent_value + "/" + repo_value + "/stargazers", false);
+        api.send(null);
+        return api.status;
+    },
+    text: function(){
+        var api = new XMLHttpRequest();
+        api.open("GET", "https://api.github.com/repos/" + parent_value + "/" + repo_value + "/stargazers", false);
+        api.send(null);
+        return api.responseText;
+    }
+}
