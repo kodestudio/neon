@@ -54,3 +54,18 @@ var GitHub_getEvents = {
         return api.responseText;
     }
 }
+
+var GitHub_getContents = {
+    code: function(){
+        var api = new XMLHttpRequest();
+        api.open("GET", "https://api.github.com/repos/" + parent_value + "/" + repo_value + "/contents", false);
+        api.send(null);
+        return api.status;
+    },
+    text: function(){
+        var api = new XMLHttpRequest();
+        api.open("GET", "https://api.github.com/repos/" + parent_value + "/" + repo_value + "/contents", false);
+        api.send(null);
+        return api.responseText;
+    }
+}
