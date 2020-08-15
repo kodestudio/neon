@@ -10,6 +10,20 @@
 var parent_value = config_parent;
 var repo_value = config_repo;
 
+
+class GitHubGet{
+    constructor(){
+
+    }
+    get(){
+
+    }
+    code(){
+
+    }
+}
+
+
 var GitHub_getCustom = {
     code: function (type, url, ex) {
         var api = new XMLHttpRequest();
