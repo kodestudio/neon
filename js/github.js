@@ -1,4 +1,5 @@
 // This file to get data from GitHub API
+// GitHubRepoGet class can replace all the rest of the function. However still kept to debug and backup.
 /*
     Author: võ Quốc Thịnh
     GitHub: quocthinhvo
@@ -11,15 +12,22 @@ var parent_value = config_parent;
 var repo_value = config_repo;
 
 
-class GitHubGet{
-    constructor(){
-
+class GitHubRepoGet{
+    constructor(url){
+        // defaulf url = https://api.github.com/repos/
+        this.url = url;
     }
-    get(){
-
+    get(input){
+        var api = new XMLHttpRequest();
+        api.open("GET", "https://api.github.com/repos/" + parent_value + "/" + repo_value + "/" + input, false);
+        api.send(null);
+        return api.responseText;
     }
-    code(){
-
+    code(input){
+        var api = new XMLHttpRequest();
+        api.open("GET", "https://api.github.com/repos/" + parent_value + "/" + repo_value + "/" + input, false);
+        api.send(null);
+        return api.status;
     }
 }
 
