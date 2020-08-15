@@ -114,3 +114,18 @@ var GitHub_getHooks = {
         return api.responseText;
     }
 }
+
+var GitHub_getTags = {
+    code: function(){
+        var api = new XMLHttpRequest();
+        api.open("GET", "https://api.github.com/repos/" + parent_value + "/" + repo_value + "/tags", false);
+        api.send(null);
+        return api.status;
+    },
+    text: function(){
+        var api = new XMLHttpRequest();
+        api.open("GET", "https://api.github.com/repos/" + parent_value + "/" + repo_value + "/tags", false);
+        api.send(null);
+        return api.responseText;
+    }
+}
