@@ -99,3 +99,18 @@ var GitHub_getTeams = {
         return api.responseText;
     }
 }
+
+var GitHub_getHooks = {
+    code: function(){
+        var api = new XMLHttpRequest();
+        api.open("GET", "https://api.github.com/repos/" + parent_value + "/" + repo_value + "/hooks", false);
+        api.send(null);
+        return api.status;
+    },
+    text: function(){
+        var api = new XMLHttpRequest();
+        api.open("GET", "https://api.github.com/repos/" + parent_value + "/" + repo_value + "/hooks", false);
+        api.send(null);
+        return api.responseText;
+    }
+}
