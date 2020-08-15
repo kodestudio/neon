@@ -1,5 +1,9 @@
 # Neon - static site generator
-Lib to build static website for display the repository's (GitHub) events on a timeline.
+Tools to display the repository's (GitHub) events on a timeline.
+
+We don't know how to classify Neon. 
+
+The most basic definition of Neon: is a tool to help you create websites. That site displays the latest information and events for your repository and sorts it on a timeline.
 
 Neon is develop in "dev" branch
 
