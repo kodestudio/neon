@@ -1,6 +1,8 @@
 # Neon - static site generator
 Lib to build static website for display the repository's (GitHub) events on a timeline.
 
+Neon is develop in "dev" branch
+
 ## What is Neon?
 Neon is a static website builder, used for open source projects on GitHub. Neon will display all the events that happen with the repo and are displayed in the timeline.
 ## What does Neon feature?
