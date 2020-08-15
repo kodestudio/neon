@@ -44,6 +44,7 @@ That all. You can see Neon works well.
 - Add Showdown library.
 - Add Bootstrap.
 - Write README.md for introduce about Neon.
+- Complete GitHub.js (GetData).
 ## Library and resource we use to make Neon
 - [Bootstrap](https://getbootstrap.com/) for design
 - [Showndown](http://showdownjs.com/) is a library for convert MD to HTML
