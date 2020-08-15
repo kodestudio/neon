@@ -19,13 +19,18 @@ Installing Neon is very simple. Neon is just a static website and you can instal
 ### Step 1. Download the latest Neon release
 You can find it at GitHub or download it directly from Kode's server.
 ### Step 2. Add Neon to your repository
-In your archive, create a new directory called "feeds" or "neon". Then copy all files in the release you downloaded. Make sure you have the correct path to the "index.html" file. For example, your-repo/neon/index.html.
+#### Case 1: 
+In your repository, create a new directory called "docs" or "docs". Then copy all files in the release you downloaded. Make sure you have the correct path to the "index.html" file. For example, your-repo/docs/index.html.
+#### Case 2:
+Create new blank branch with following name "neon" and push all push all files in Neon. Make sure you have correct path to index.html at ROOT.
 ### Step 3. Config Neon
 You need to change the parameters in Neon. All will be found in "js / config.js"
 ### Step 4. Enable Static Site in repository
 You can see official document [here](https://pages.github.com/).
 
-After enabling Static Site. You set the path for that Static Site to the "neon" or "feeds" directory in the previous step.
+If at **Step 2** you do with *Case 1*: set the path for that Static Site to the "docs" folder.
+
+Else you set the branch for GitHub Page to Neon.
 ### Step 5. Enjoy with Neon ;)
 That all. You can see Neon word well.
 ## Task complete
