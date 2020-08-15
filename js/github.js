@@ -129,3 +129,18 @@ var GitHub_getTags = {
         return api.responseText;
     }
 }
+
+var GitHub_getLanguages = {
+    code: function(){
+        var api = new XMLHttpRequest();
+        api.open("GET", "https://api.github.com/repos/" + parent_value + "/" + repo_value + "/languages", false);
+        api.send(null);
+        return api.status;
+    },
+    text: function(){
+        var api = new XMLHttpRequest();
+        api.open("GET", "https://api.github.com/repos/" + parent_value + "/" + repo_value + "/languages", false);
+        api.send(null);
+        return api.responseText;
+    }
+}
