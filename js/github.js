@@ -123,15 +123,15 @@ var GitHub_getTeams = {
 }
 
 var GitHub_getHooks = {
-    code: function(){
+    code: function(page){
         var api = new XMLHttpRequest();
-        api.open("GET", "https://api.github.com/repos/" + parent_value + "/" + repo_value + "/hooks", false);
+        api.open("GET", "https://api.github.com/repos/" + parent_value + "/" + repo_value + "/hooks?page=" + page, false);
         api.send(null);
         return api.status;
     },
-    text: function(){
+    text: function(page){
         var api = new XMLHttpRequest();
-        api.open("GET", "https://api.github.com/repos/" + parent_value + "/" + repo_value + "/hooks", false);
+        api.open("GET", "https://api.github.com/repos/" + parent_value + "/" + repo_value + "/hooks?page="+page, false);
         api.send(null);
         return api.responseText;
     }
