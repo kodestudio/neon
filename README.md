@@ -50,6 +50,8 @@ That all. You can see Neon works well.
 - [Showndown](http://showdownjs.com/) is a library for convert MD to HTML
 - [GitHub API]()
 - [OAuth]()
+- [JQuery]()
+- [AJAX]()
 ## Neon is opensource
 You can contribute to Neon in the following ways:
 - Add a star on GitHub.

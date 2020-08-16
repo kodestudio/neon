@@ -63,165 +63,165 @@ var GitHub_getInfo = {
 }
 
 var GitHub_getEvents = {
-    code: function(){
+    code: function(page){
         var api = new XMLHttpRequest();
-        api.open("GET", "https://api.github.com/repos/" + parent_value + "/" + repo_value + "/events", false);
+        api.open("GET", "https://api.github.com/repos/" + parent_value + "/" + repo_value + "/events?page=" + page, false);
         api.send(null);
         return api.status;
     },
-    text: function(){
+    text: function(page){
         var api = new XMLHttpRequest();
-        api.open("GET", "https://api.github.com/repos/" + parent_value + "/" + repo_value + "/events", false);
+        api.open("GET", "https://api.github.com/repos/" + parent_value + "/" + repo_value + "/events?page=" + page, false);
         api.send(null);
         return api.responseText;
     }
 }
 
 var GitHub_getContents = {
-    code: function(){
+    code: function(page){
         var api = new XMLHttpRequest();
-        api.open("GET", "https://api.github.com/repos/" + parent_value + "/" + repo_value + "/contents", false);
+        api.open("GET", "https://api.github.com/repos/" + parent_value + "/" + repo_value + "/contents?page="+page, false);
         api.send(null);
         return api.status;
     },
-    text: function(){
+    text: function(page){
         var api = new XMLHttpRequest();
-        api.open("GET", "https://api.github.com/repos/" + parent_value + "/" + repo_value + "/contents", false);
+        api.open("GET", "https://api.github.com/repos/" + parent_value + "/" + repo_value + "/contents?" + page, false);
         api.send(null);
         return api.responseText;
     }
 }
 
 var GitHub_getForks = {
-    code: function(){
+    code: function(page){
         var api = new XMLHttpRequest();
-        api.open("GET", "https://api.github.com/repos/" + parent_value + "/" + repo_value + "/forks", false);
+        api.open("GET", "https://api.github.com/repos/" + parent_value + "/" + repo_value + "/forks?page=" + page , false);
         api.send(null);
         return api.status;
     },
-    text: function(){
+    text: function(page){
         var api = new XMLHttpRequest();
-        api.open("GET", "https://api.github.com/repos/" + parent_value + "/" + repo_value + "/forks", false);
+        api.open("GET", "https://api.github.com/repos/" + parent_value + "/" + repo_value + "/forks?page="+page, false);
         api.send(null);
         return api.responseText;
     }
 }
 
 var GitHub_getTeams = {
-    code: function(){
+    code: function(page){
         var api = new XMLHttpRequest();
-        api.open("GET", "https://api.github.com/repos/" + parent_value + "/" + repo_value + "/teams", false);
+        api.open("GET", "https://api.github.com/repos/" + parent_value + "/" + repo_value + "/teams?page=" + page, false);
         api.send(null);
         return api.status;
     },
-    text: function(){
+    text: function(page){
         var api = new XMLHttpRequest();
-        api.open("GET", "https://api.github.com/repos/" + parent_value + "/" + repo_value + "/teams", false);
+        api.open("GET", "https://api.github.com/repos/" + parent_value + "/" + repo_value + "/teams?page=" + page, false);
         api.send(null);
         return api.responseText;
     }
 }
 
 var GitHub_getHooks = {
-    code: function(){
+    code: function(page){
         var api = new XMLHttpRequest();
-        api.open("GET", "https://api.github.com/repos/" + parent_value + "/" + repo_value + "/hooks", false);
+        api.open("GET", "https://api.github.com/repos/" + parent_value + "/" + repo_value + "/hooks?page=" + page, false);
         api.send(null);
         return api.status;
     },
-    text: function(){
+    text: function(page){
         var api = new XMLHttpRequest();
-        api.open("GET", "https://api.github.com/repos/" + parent_value + "/" + repo_value + "/hooks", false);
+        api.open("GET", "https://api.github.com/repos/" + parent_value + "/" + repo_value + "/hooks?page="+page, false);
         api.send(null);
         return api.responseText;
     }
 }
 
 var GitHub_getTags = {
-    code: function(){
+    code: function(page){
         var api = new XMLHttpRequest();
-        api.open("GET", "https://api.github.com/repos/" + parent_value + "/" + repo_value + "/tags", false);
+        api.open("GET", "https://api.github.com/repos/" + parent_value + "/" + repo_value + "/tags?page="+page, false);
         api.send(null);
         return api.status;
     },
-    text: function(){
+    text: function(page){
         var api = new XMLHttpRequest();
-        api.open("GET", "https://api.github.com/repos/" + parent_value + "/" + repo_value + "/tags", false);
+        api.open("GET", "https://api.github.com/repos/" + parent_value + "/" + repo_value + "/tags?page="+page, false);
         api.send(null);
         return api.responseText;
     }
 }
 
 var GitHub_getLanguages = {
-    code: function(){
+    code: function(page){
         var api = new XMLHttpRequest();
-        api.open("GET", "https://api.github.com/repos/" + parent_value + "/" + repo_value + "/languages", false);
+        api.open("GET", "https://api.github.com/repos/" + parent_value + "/" + repo_value + "/languages?page="+page, false);
         api.send(null);
         return api.status;
     },
-    text: function(){
+    text: function(page){
         var api = new XMLHttpRequest();
-        api.open("GET", "https://api.github.com/repos/" + parent_value + "/" + repo_value + "/languages", false);
+        api.open("GET", "https://api.github.com/repos/" + parent_value + "/" + repo_value + "/languages?page="+page, false);
         api.send(null);
         return api.responseText;
     }
 }
 
 var GitHub_getStars = {
-    code: function(){
+    code: function(page){
         var api = new XMLHttpRequest();
-        api.open("GET", "https://api.github.com/repos/" + parent_value + "/" + repo_value + "/stargazers", false);
+        api.open("GET", "https://api.github.com/repos/" + parent_value + "/" + repo_value + "/stargazers?page="+page, false);
         api.send(null);
         return api.status;
     },
-    text: function(){
+    text: function(page){
         var api = new XMLHttpRequest();
-        api.open("GET", "https://api.github.com/repos/" + parent_value + "/" + repo_value + "/stargazers", false);
+        api.open("GET", "https://api.github.com/repos/" + parent_value + "/" + repo_value + "/stargazers?page="+page, false);
         api.send(null);
         return api.responseText;
     }
 }
 
 var GitHub_getContributors = {
-    code: function(){
+    code: function(page){
         var api = new XMLHttpRequest();
-        api.open("GET", "https://api.github.com/repos/" + parent_value + "/" + repo_value + "/contributors", false);
+        api.open("GET", "https://api.github.com/repos/" + parent_value + "/" + repo_value + "/contributors?page="+page, false);
         api.send(null);
         return api.status;
     },
-    text: function(){
+    text: function(page){
         var api = new XMLHttpRequest();
-        api.open("GET", "https://api.github.com/repos/" + parent_value + "/" + repo_value + "/contributors", false);
+        api.open("GET", "https://api.github.com/repos/" + parent_value + "/" + repo_value + "/contributors?page="+page, false);
         api.send(null);
         return api.responseText;
     }
 }
 
 var GitHub_getSubs = {
-    code: function(){
+    code: function(page){
         var api = new XMLHttpRequest();
-        api.open("GET", "https://api.github.com/repos/" + parent_value + "/" + repo_value + "/subscribers", false);
+        api.open("GET", "https://api.github.com/repos/" + parent_value + "/" + repo_value + "/subscribers?page="+page, false);
         api.send(null);
         return api.status;
     },
-    text: function(){
+    text: function(page){
         var api = new XMLHttpRequest();
-        api.open("GET", "https://api.github.com/repos/" + parent_value + "/" + repo_value + "/subscribers", false);
+        api.open("GET", "https://api.github.com/repos/" + parent_value + "/" + repo_value + "/subscribers?page="+page, false);
         api.send(null);
         return api.responseText;
     }
 }
 
 var GitHub_getDownloads = {
-    code: function(){
+    code: function(page){
         var api = new XMLHttpRequest();
-        api.open("GET", "https://api.github.com/repos/" + parent_value + "/" + repo_value + "/downloads", false);
+        api.open("GET", "https://api.github.com/repos/" + parent_value + "/" + repo_value + "/downloads?page="+page, false);
         api.send(null);
         return api.status;
     },
-    text: function(){
+    text: function(page){
         var api = new XMLHttpRequest();
-        api.open("GET", "https://api.github.com/repos/" + parent_value + "/" + repo_value + "/downloads", false);
+        api.open("GET", "https://api.github.com/repos/" + parent_value + "/" + repo_value + "/downloads?page="+page, false);
         api.send(null);
         return api.responseText;
     }
