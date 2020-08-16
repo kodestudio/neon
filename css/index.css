@@ -31,3 +31,16 @@
     width: 150px;
     height: 150px;
 }
+
+/*change layout auto in smartphone*/
+@media only screen and (max-width: 600px){
+    .colum-4
+    {
+        width: 100%;
+    
+    }
+    .colum-6
+    {
+        width: 100%;
+    }
+}
