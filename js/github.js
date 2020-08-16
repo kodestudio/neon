@@ -138,15 +138,15 @@ var GitHub_getHooks = {
 }
 
 var GitHub_getTags = {
-    code: function(){
+    code: function(page){
         var api = new XMLHttpRequest();
-        api.open("GET", "https://api.github.com/repos/" + parent_value + "/" + repo_value + "/tags", false);
+        api.open("GET", "https://api.github.com/repos/" + parent_value + "/" + repo_value + "/tags?page="+page, false);
         api.send(null);
         return api.status;
     },
-    text: function(){
+    text: function(page){
         var api = new XMLHttpRequest();
-        api.open("GET", "https://api.github.com/repos/" + parent_value + "/" + repo_value + "/tags", false);
+        api.open("GET", "https://api.github.com/repos/" + parent_value + "/" + repo_value + "/tags?page="+page, false);
         api.send(null);
         return api.responseText;
     }
