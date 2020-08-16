@@ -108,15 +108,15 @@ var GitHub_getForks = {
 }
 
 var GitHub_getTeams = {
-    code: function(){
+    code: function(page){
         var api = new XMLHttpRequest();
-        api.open("GET", "https://api.github.com/repos/" + parent_value + "/" + repo_value + "/teams", false);
+        api.open("GET", "https://api.github.com/repos/" + parent_value + "/" + repo_value + "/teams?page=" + page, false);
         api.send(null);
         return api.status;
     },
-    text: function(){
+    text: function(page){
         var api = new XMLHttpRequest();
-        api.open("GET", "https://api.github.com/repos/" + parent_value + "/" + repo_value + "/teams", false);
+        api.open("GET", "https://api.github.com/repos/" + parent_value + "/" + repo_value + "/teams?page=" + page, false);
         api.send(null);
         return api.responseText;
     }
