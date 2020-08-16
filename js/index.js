@@ -13,4 +13,6 @@ function init(){
     var obj_repo = JSON.parse(GitHub_getInfo.text());
     // change img of repo
     document.getElementById("owner_avatar").src = obj_repo.owner.avatar_url;
+    // change repo name
+    document.getElementById("repo_name").innerHTML = obj_repo.full_name;
 }
