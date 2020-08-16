@@ -19,6 +19,8 @@
         <!--Load Bootstrap-->
         <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
         <script src="bootstrap/js/bootstrap.min.js"></script>
+        <!--Load font-->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
     </head>
     <!--onload() is a function run affter page load complete-->
     <body onLoad="init()">
@@ -35,6 +37,13 @@
                     <img id="owner_avatar" src="resource/loader.png" class="rounded-circle">
                     <h3 id="repo_name"></h3>
                     <p id="repo_desc"></p>
+                </div>
+                <div class="center">
+                    <button id="repo_stars" class="btn btn-outline-danger"><i class="fas fa-star"></i></button>
+                    <button id="repo_watchers" class="btn btn-outline-danger"><i class="fas fa-eye"></i></button>
+                    <button id="repo_size" class="btn btn-outline-danger"><i class="fas fa-file"></i></button>
+                    <button id="repo_forks" class="btn btn-outline-danger"><i class="fab fa-creative-commons-share"></i></button>
+                    <button id="repo_issues" class="btn btn-outline-danger"><i class="far fa-comment-dots"></i></button>
                 </div>
             </div>
             <div class="colum-6">

@@ -18,4 +18,5 @@ function init(){
     document.getElementById("repo_name").innerHTML = obj_repo.full_name;
     //change description of repo
     document.getElementById("repo_desc").innerHTML = obj_repo.description;
+    // load num
 }
