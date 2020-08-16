@@ -1,0 +1,27 @@
+/* 
+    This file is stylesheet for index.html. 
+    Author: Võ Quốc Thịnh
+    GitHub: quocthinhvo
+    Email: quocthinhvo0@gmail.com
+*/
+
+.row 
+{
+    /* this class fotmat for a row*/
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.colum-4
+{
+    /*this class use for comlum with 40% width*/
+    width: 40%;
+}
+
+.colum-6
+{
+    /*this class use for col with width  = 60%*/
+    width: 60%;
+}
