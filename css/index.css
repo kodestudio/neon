@@ -5,7 +5,7 @@
     Email: quocthinhvo0@gmail.com
 */
 
-.row 
+.rows
 {
     /* this class fotmat for a row*/
     display: -ms-flexbox;
@@ -28,6 +28,6 @@
 /*style of owner_avatar*/
 #owner_avatar
 {
-    width: 50px;
-    height: 50px;
+    width: 150px;
+    height: 150px;
 }
