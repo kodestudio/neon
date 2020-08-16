@@ -27,21 +27,27 @@
         <!--Navigation block end-->
         <!--List main data. in the comlum-4 will show info of repo. colum-6 show list event with timeline-->
         <div id="main" class="rows">
-            <div class="colum-4 text-center">
-                <img id="owner_avatar" src="resource/loading.png" class="rounded-circle">
-                <h3 id="repo_name"></h3>
+            <div class="colum-4">
+                <div class="alert alert-info center">
+                    <strong>Quick info</strong>
+                </div>
+                <div class="center">
+                    <img id="owner_avatar" src="resource/loader.png" class="rounded-circle">
+                    <h3 id="repo_name"></h3>
+                    <p id="repo_desc"></p>
+                </div>
             </div>
             <div class="colum-6">
-                
+                <div class="alert alert-info">
+                    <strong>Feeds</strong>
+                </div>
             </div>
         </div>
         <!--Block end of web-->
-        <div id="footer" class="rows bg-light">
-            <div class="col-12 text-center">
-                <!--you can add another link here with <a>-->
-                <!--Dont remove "Neon" credit it-->
-                <p>This site powered by <a href="https://www.github.com/kodestudio/neon">Neon</a></p>
-            </div>
+        <div id="footer" class="alert alert-info center">
+            <!--you can add another link here with <a>-->
+            <!--Dont remove "Neon" credit it-->
+            <strong>This site powered by <a href="https://www.github.com/kodestudio/neon">Neon</a></strong>
         </div>
         <!--Block of dialog info-->
         <div id="dialog" class="modal">

@@ -26,6 +26,11 @@
     /*this class use for col with width  = 60%*/
     width: 60%;
 }
+
+.center
+{
+    text-align: center;
+}
 /*style of owner_avatar*/
 #owner_avatar
 {
