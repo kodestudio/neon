@@ -153,15 +153,15 @@ var GitHub_getTags = {
 }
 
 var GitHub_getLanguages = {
-    code: function(){
+    code: function(page){
         var api = new XMLHttpRequest();
-        api.open("GET", "https://api.github.com/repos/" + parent_value + "/" + repo_value + "/languages", false);
+        api.open("GET", "https://api.github.com/repos/" + parent_value + "/" + repo_value + "/languages?page="+page, false);
         api.send(null);
         return api.status;
     },
-    text: function(){
+    text: function(page){
         var api = new XMLHttpRequest();
-        api.open("GET", "https://api.github.com/repos/" + parent_value + "/" + repo_value + "/languages", false);
+        api.open("GET", "https://api.github.com/repos/" + parent_value + "/" + repo_value + "/languages?page="+page, false);
         api.send(null);
         return api.responseText;
     }
