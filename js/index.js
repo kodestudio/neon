@@ -8,7 +8,8 @@ function init(){
     /*
         init is the first function run when page loaded.
     */
-
+    //load title
+    document.title = config_title;
     // first: get json of github about this repo
     var obj_repo = JSON.parse(GitHub_getInfo.text());
     // change img of repo

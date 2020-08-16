@@ -20,6 +20,7 @@ var config_key = "value";
 // if url to repo = "https://www.github.com/kodestudio/neon" then parent = "kodestudio" and repo="neon"
 var config_parent = "kodestudio";
 var config_repo = "neon";
+var config_title = "Title page here";
 
 // config type event load
 /*
