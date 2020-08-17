@@ -11,4 +11,5 @@ function init(){
     //load title
     document.title = config_title;
     info_create();
+    event_get();
 }

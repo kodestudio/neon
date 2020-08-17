@@ -18,8 +18,8 @@ const config_key = "value";
 
 // Name of org or owner repo
 // if url to repo = "https://www.github.com/kodestudio/neon" then parent = "kodestudio" and repo="neon"
-const config_parent = "kodestudio";
-const config_repo = "neon";
+const config_parent = "flutter";
+const config_repo = "flutter";
 const config_title = "Neon - event timeline";
 const config_homepage = "";
 // you can add nottification here
