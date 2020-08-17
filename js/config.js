@@ -18,11 +18,11 @@ const config_key = "value";
 
 // Name of org or owner repo
 // if url to repo = "https://www.github.com/kodestudio/neon" then parent = "kodestudio" and repo="neon"
-const config_parent = "kodestudio";
-const config_repo = "jetos";
+const config_parent = "nodejs";
+const config_repo = "node";
 const config_title = "Neon - event timeline";
 const config_homepage = "";
-
+const config_notification = "";
 // config type event load
 /*
 const config_issues = true;
