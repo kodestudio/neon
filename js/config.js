@@ -19,7 +19,7 @@ const config_key = "value";
 // Name of org or owner repo
 // if url to repo = "https://www.github.com/kodestudio/neon" then parent = "kodestudio" and repo="neon"
 const config_parent = "kodestudio";
-const config_repo = "neon";
+const config_repo = "jetos";
 const config_title = "Neon - event timeline";
 
 // config type event load
@@ -32,3 +32,12 @@ const config_pull = true;
 */
 // config of custom Data
 const config_customapi = "";
+
+/*
+config style button info
+*/
+const config_button_stars = ' <i class="fas fa-star"></i>';
+const config_button_watchers = ' <i class="fas fa-eye"></i>';
+const config_button_size = ' <i class="fas fa-file"></i>';
+const config_button_forks = ' <i class="fab fa-creative-commons-share"></i>';
+const config_button_issues = ' <i class="far fa-comment-dots"></i>';
