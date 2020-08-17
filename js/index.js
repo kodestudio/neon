@@ -25,4 +25,9 @@ function init(){
     document.getElementById("repo_forks").innerHTML = obj_repo.forks_count + config_button_forks;
     document.getElementById("repo_issues").innerHTML = obj_repo.open_issues + config_button_issues;
     // change value of more info
+    document.getElementById("repo_lang").innerHTML = obj_repo.language;
+    document.getElementById("repo_created").innerHTML = obj_repo.created_at;
+    document.getElementById("repo_updated").innerHTML = obj_repo.updated_at;
+    document.getElementById("repo_pushed").innerHTML = obj_repo.pushed_at;
+    document.getElementById("repo_defaultbranch").innerHTML = obj_repo.default_branch;
 }
