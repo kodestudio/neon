@@ -30,4 +30,9 @@ function init(){
     document.getElementById("repo_updated").innerHTML = obj_repo.updated_at;
     document.getElementById("repo_pushed").innerHTML = obj_repo.pushed_at;
     document.getElementById("repo_defaultbranch").innerHTML = obj_repo.default_branch;
+    //show notification here
+    if (config_notification != ""){
+        document.getElementById("repo_noti").innerHTML = config_notification;
+        document.getElementById("div_noti").style.display = "block";
+    }
 }

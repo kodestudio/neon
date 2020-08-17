@@ -22,6 +22,7 @@ const config_parent = "nodejs";
 const config_repo = "node";
 const config_title = "Neon - event timeline";
 const config_homepage = "";
+// you can add nottification here
 const config_notification = "";
 // config type event load
 /*
