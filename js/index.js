@@ -24,4 +24,5 @@ function init(){
     document.getElementById("repo_size").innerHTML = obj_repo.size + config_button_size;
     document.getElementById("repo_forks").innerHTML = obj_repo.forks_count + config_button_forks;
     document.getElementById("repo_issues").innerHTML = obj_repo.open_issues + config_button_issues;
+    // change value of more info
 }

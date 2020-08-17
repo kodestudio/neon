@@ -21,6 +21,7 @@ const config_key = "value";
 const config_parent = "kodestudio";
 const config_repo = "jetos";
 const config_title = "Neon - event timeline";
+const config_homepage = "";
 
 // config type event load
 /*
