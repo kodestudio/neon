@@ -20,7 +20,7 @@ const config_key = "value";
 // if url to repo = "https://www.github.com/kodestudio/neon" then parent = "kodestudio" and repo="neon"
 const config_parent = "kodestudio";
 const config_repo = "neon";
-const config_title = "Title page here";
+const config_title = "Neon - event timeline";
 
 // config type event load
 /*
