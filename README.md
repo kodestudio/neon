@@ -45,6 +45,11 @@ That all. You can see Neon works well.
 - Add Bootstrap.
 - Write README.md for introduce about Neon.
 - Complete GitHub.js (GetData).
+- Added quick info of Repo (with button).
+- Added more info of Repo.
+- Added more key of config.
+- Complete show notification.
+- Design new UI with 3 zone.
 ## Library and resource we use to make Neon
 - [Bootstrap](https://getbootstrap.com/) for design
 - [Showndown](http://showdownjs.com/) is a library for convert MD to HTML
