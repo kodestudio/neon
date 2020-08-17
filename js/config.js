@@ -14,20 +14,32 @@ GitHub: quocthinhvo
 Email: quocthinhvo0@gmail.com
 */
 
-var config_key = "value";
+const config_key = "value";
 
 // Name of org or owner repo
 // if url to repo = "https://www.github.com/kodestudio/neon" then parent = "kodestudio" and repo="neon"
-var config_parent = "kodestudio";
-var config_repo = "neon";
-
+const config_parent = "nodejs";
+const config_repo = "node";
+const config_title = "Neon - event timeline";
+const config_homepage = "";
+// you can add nottification here
+const config_notification = "";
 // config type event load
 /*
-var config_issues = true;
-var config_isuecomment = true;
-var config_release = true;
-var config_push = true;
-var config_pull = true;
+const config_issues = true;
+const config_isuecomment = true;
+const config_release = true;
+const config_push = true;
+const config_pull = true;
 */
 // config of custom Data
-var config_customapi = "";
+const config_customapi = "";
+
+/*
+config style button info
+*/
+const config_button_stars = ' <i class="fas fa-star"></i>';
+const config_button_watchers = ' <i class="fas fa-eye"></i>';
+const config_button_size = ' <i class="fas fa-file"></i>';
+const config_button_forks = ' <i class="fab fa-creative-commons-share"></i>';
+const config_button_issues = ' <i class="far fa-comment-dots"></i>';
