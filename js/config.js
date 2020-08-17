@@ -18,20 +18,22 @@ const config_key = "value";
 
 // Name of org or owner repo
 // if url to repo = "https://www.github.com/kodestudio/neon" then parent = "kodestudio" and repo="neon"
-const config_parent = "flutter";
-const config_repo = "flutter";
+const config_parent = "kodestudio";
+const config_repo = "test";
 const config_title = "Neon - event timeline";
 const config_homepage = "";
 // you can add nottification here
 const config_notification = "";
 // config type event load
-/*
-const config_issues = true;
-const config_isuecomment = true;
-const config_release = true;
-const config_push = true;
-const config_pull = true;
-*/
+
+const config_show_issues = true;
+const config_show_isuecomment = true;
+const config_show_release = true;
+const config_show_push = true;
+const config_show_pull = true;
+const config_show_wiki = true;
+const config_show_fork = true;
+
 // config of custom Data
 const config_customapi = "";
 
