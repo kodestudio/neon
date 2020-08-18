@@ -7,7 +7,12 @@
 
 function system_convert(md){
     var converter = new showdown.Converter();
+    converter.setOption("parseImgDimensions", true);
     converter.setOption("tables", true);
+    converter.setOption("simplifiedAutoLink", true);
+    converter.setOption("tasklists", true);
+    converter.setOption("ghMentions", true);
+    converter.setOption("ghMentionsLink", true);
     var html = converter.makeHtml(md);
     return html;
 }
