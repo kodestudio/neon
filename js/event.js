@@ -6,8 +6,8 @@
 */
 var page = 1;
 function addList(input){
-    var tag = document.createElement("li");
-    tag.className = "alert alert-warning";
+    var tag = document.createElement("div");
+    tag.className = "card";
     tag.innerHTML = input;
     document.getElementById("list_events").appendChild(tag);
 }
@@ -42,7 +42,14 @@ function event_get(){
 }
 
 function event_Issue(input, i){
-    
+    var content = config_style_issue;
+    content = content.replace("AvatarValue", input[i].actor.avatar_url);
+    content = content.replace("UserNameValue", input[i].actor.login);
+    content = content.replace("TitleValue", input[i].payload.issue.title);
+    content = content.replace("BodyValue", system_convert(input[i].payload.issue.body));
+    content = content.replace("UrlValue", input[i].payload.issue.html_url);
+    content = content.replace("TimeValue", input[i].payload.issue.created_at);
+    addList(content);
 }
 
 function event_CommentIssue(input, i){
