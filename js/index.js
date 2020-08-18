@@ -13,3 +13,10 @@ function init(){
     info_create();
     event_get();
 }
+
+window.onscroll = function(){
+    //console.log("Đang cuộn tới " + window.pageYOffset + " trong " + $(document).height());
+    if($(window).scrollTop() + $(window).height() > $(document).height() - 100) {
+        event_get();
+    }
+}

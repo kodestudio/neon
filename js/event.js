@@ -40,6 +40,7 @@ function event_get(){
             break;  
         }
     }
+    //document.querySelector('img').style.width = "100%";
 }
 
 function event_Issue(input, i){
