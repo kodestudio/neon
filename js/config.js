@@ -45,3 +45,8 @@ const config_button_watchers = ' <i class="fas fa-eye"></i>';
 const config_button_size = ' <i class="fas fa-file"></i>';
 const config_button_forks = ' <i class="fab fa-creative-commons-share"></i>';
 const config_button_issues = ' <i class="far fa-comment-dots"></i>';
+
+/*
+config style
+*/
+const config_style_issues = '<div class="card-header"><img class="img-thumbnail rounded-circle" src="AvatarValue" style="width: 50px; height: 50px;"><strong>UserNameValue</strong><i>created this issues</i></div><div class="card-body"><h3>TitleValue</h3><hr class="my-4"><div>BodyValue</div></div><div class="card-footer"><a href="UrlValue"><button class="btn btn-outline-primary"><i class="fab fa-github"></i></button></a><i style="float: right;">TimeValue</i></div>';
