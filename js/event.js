@@ -83,7 +83,24 @@ function event_CommentIssue(input, i){
 }
 
 function event_Pull(input, i){
+    switch (input[i].payload.action){
+        case "opened":
+            var content = config_style_issue;
+            content = content.replace("AvatarUrl", input[i].actor.avatar_url);
+            content = content.replace("UserNameValue", ' ' + input[i].actor.login + ' ');
+            content = content.replace("TitleValue", input[i].payload.pull_request.title);
+            content = content.replace("BodyValue", system_convert(input[i].payload.pull_request.body));
+            content = content.replace("GitHubValue", input[i].payload.pull_request.html_url);
+            content = content.replace("20/20/20", input[i].payload.pull_request.created_at);
+            content = content.replace("UserUrlValue", input[i].payload.pull_request.user.html_url);
+            content = content.replace("UserUrlValue", input[i].payload.pull_request.user.html_url);
+            content = content.replace("ActionValue", "opened pull_request");
+            addList(content);
+        break;
+        case "closed":
 
+        break;
+    }
 }
 
 function event_Fork(input,i){
@@ -110,7 +127,7 @@ function event_Push(input, i){
     content = content.replace("ActionValue", "pushed new code");
     content = content.replace("TitleValue", "Added " + input[i].payload.commits.length + " commits in this push");
     var temp;
-    for (var j = 0; j< input[i].payload.commits.length; j++){
+    for (var j = 0; j < input[i].payload.commits.length; j++){
         var  li = '<li>' + input[i].payload.commits[j].message + '</li>';
         temp = temp + li;
         //console.log(input[i].payload.commits[j].message);
