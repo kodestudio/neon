@@ -114,7 +114,17 @@ function event_Pull(input, i){
 }
 
 function event_Fork(input,i){
-
+    var content = config_style_issue;
+    content = content.replace("AvatarUrl", input[i].actor.avatar_url);
+    content = content.replace("UserNameValue", ' ' + input[i].actor.login + ' ');
+    content = content.replace("TitleValue", "Forked this repository");
+    content = content.replace("BodyValue", "");
+    content = content.replace("GitHubValue", "");
+    content = content.replace("20/20/20", input[i].payload.forkee.updated_at);
+    content = content.replace("UserUrlValue", input[i].payload.forkee.owner.html_url);
+    content = content.replace("UserUrlValue", input[i].payload.forkee.owner.html_url);
+    content = content.replace("ActionValue", "forked");
+    addList(content);
 }
 
 function event_Gollum(input,i){
@@ -130,6 +140,8 @@ function event_Push(input, i){
     content = content.replace("AvatarUrl", input[i].actor.avatar_url);
     content = content.replace("UserNameValue", ' ' + input[i].actor.login + ' ');
     //content = content.replace("TitleValue", input[i].payload.commits[0].message);
+    //content = content.replace("UserUrlValue", input[i].payload.user.html_url);
+    //content = content.replace("UserUrlValue", input[i].payload.pull_request.user.html_url);
     content = content.replace("GitHubValue", "https://www.github.com");
     content = content.replace("20/20/20", input[i].created_at);
     //content = content.replace("UserUrlValue", input[i].payload.issue.user.html_url);
