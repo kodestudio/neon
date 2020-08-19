@@ -94,7 +94,7 @@ function event_Pull(input, i){
             content = content.replace("20/20/20", input[i].payload.pull_request.created_at);
             content = content.replace("UserUrlValue", input[i].payload.pull_request.user.html_url);
             content = content.replace("UserUrlValue", input[i].payload.pull_request.user.html_url);
-            content = content.replace("ActionValue", "opened pull_request");
+            content = content.replace("ActionValue", "opened pull request");
             addList(content);
         break;
         case "closed":
