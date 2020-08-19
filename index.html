@@ -6,8 +6,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!--Load config first-->
         <script src="js/config.js"></script>
+        <!--Load system-->
+        <script src="js/system.js"></script>
         <!--Load GitHub API lib-->
         <script src="js/github.js"></script>
+        <!--load create info-->
+        <script src="js/info.js"></script>
+        <!--Load event-->
+        <script src="js/event.js"></script>
         <!--Load local script-->
         <script src="js/index.js"></script>
         <!--Load local style-->
@@ -71,7 +77,11 @@
             </div>
             <div class="colum-6">
                 <div class="alert alert-info center">
-                    <strong>Feeds</strong>
+                    <strong>Timeline</strong>
+                </div>
+                <div id="list_events" class="list-group"></div>
+                <div class="alert alert-danger center" id="alert_all" style="display: none">
+                    <strong>You see all content</strong>
                 </div>
             </div>
         </div>
