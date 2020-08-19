@@ -98,7 +98,17 @@ function event_Pull(input, i){
             addList(content);
         break;
         case "closed":
-
+            var content = config_style_issue;
+            content = content.replace("AvatarUrl", input[i].actor.avatar_url);
+            content = content.replace("UserNameValue", ' ' + input[i].actor.login + ' ');
+            content = content.replace("TitleValue", input[i].payload.pull_request.title);
+            //content = content.replace("BodyValue", system_convert(input[i].payload.pull_request.body));
+            content = content.replace("BodyValue", "");
+            content = content.replace("GitHubValue", input[i].payload.pull_request.html_url);
+            content = content.replace("20/20/20", input[i].payload.pull_request.created_at);
+            content = content.replace("UserUrlValue", input[i].payload.pull_request.user.html_url);
+            content = content.replace("UserUrlValue", input[i].payload.pull_request.user.html_url);
+            content = content.replace("ActionValue", "closed pull request");
         break;
     }
 }
