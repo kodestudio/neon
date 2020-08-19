@@ -18,8 +18,8 @@ const config_key = "value";
 
 // Name of org or owner repo
 // if url to repo = "https://www.github.com/kodestudio/neon" then parent = "kodestudio" and repo="neon"
-const config_parent = "nodejs";
-const config_repo = "node";
+const config_parent = "facebook";
+const config_repo = "react-native";
 const config_title = "Neon - event timeline";
 const config_homepage = "";
 // you can add nottification here

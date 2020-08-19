@@ -12,7 +12,7 @@ function system_convert(md){
     converter.setOption("simplifiedAutoLink", true);
     converter.setOption("tasklists", true);
     converter.setOption("ghMentions", true);
-    converter.setOption("ghMentionsLink", true);
+    //converter.setOption("ghMentionsLink", true);
     var html = converter.makeHtml(md);
     return html;
 }

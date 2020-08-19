@@ -82,7 +82,24 @@ function event_Issue(input, i){
 }
 
 function event_CommentIssue(input, i){
-
+    switch (input[i].payload.action){
+        case "created":
+            var content = config_style_issue;
+            content = content.replace("AvatarUrl", input[i].actor.avatar_url);
+            content = content.replace("UserNameValue", ' ' + input[i].actor.login + ' ');
+            content = content.replace("TitleValue", input[i].payload.issue.title);
+            content = content.replace("BodyValue", system_convert(input[i].payload.comment.body));
+            content = content.replace("GitHubValue", input[i].payload.comment.html_url);
+            content = content.replace("20/20/20", input[i].created_at);
+            content = content.replace("UserUrlValue", input[i].payload.comment.user.html_url);
+            content = content.replace("UserUrlValue", input[i].payload.comment.user.html_url);
+            content = content.replace("ActionValue", "commented");
+            addList(content);
+        break;
+        case "closed":
+            
+        break;
+    }
 }
 
 function event_Pull(input, i){
@@ -124,6 +141,7 @@ function event_Fork(input,i){
     content = content.replace("BodyValue", "");
     content = content.replace("GitHubValue", "");
     content = content.replace('<hr class="my-4">', "");
+    content = content.replace('<div class="card-footer"><a href="GitHubValue"><button class="btn btn-outline-primary"><i class="fab fa-github"></i></button></a></div>','');
     content = content.replace("20/20/20", input[i].payload.forkee.updated_at);
     content = content.replace("UserUrlValue", input[i].payload.forkee.owner.html_url);
     content = content.replace("UserUrlValue", input[i].payload.forkee.owner.html_url);
@@ -173,6 +191,7 @@ function event_Watch(input, i){
     content = content.replace("20/20/20", input[i].created_at);
     content = content.replace("UserUrlValue","");
     content = content.replace("UserUrlValue", "");
+    content = content.replace('<div class="card-footer"><a href="GitHubValue"><button class="btn btn-outline-primary"><i class="fab fa-github"></i></button></a></div>','');
     switch (input[i].payload.action ) {
         case "started":
             content = content.replace("ActionValue", "gives star");
