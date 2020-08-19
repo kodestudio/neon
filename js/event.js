@@ -38,6 +38,9 @@ function event_get(){
             case "ReleaseEvent":
                 if (config_show_release) event_Release(obj_events, i);
             break;  
+            case "WatchEvent":
+                if (config_show_watch) event_Watch(obj_events, i);
+            break;
         }
     }
     //console.log(obj_events.length);
@@ -150,10 +153,14 @@ function event_Push(input, i){
     content = content.replace("TitleValue", "Added " + input[i].payload.commits.length + " commits in this push");
     var temp;
     for (var j = 0; j < input[i].payload.commits.length; j++){
-        var  li = '<li>' + input[i].payload.commits[j].message + '</li>';
+        var  li = '<li>' + system_convert(input[i].payload.commits[j].message) + '</li>';
         temp = temp + li;
         //console.log(input[i].payload.commits[j].message);
     }  
     content = content.replace("BodyValue", temp);
     addList(content);
+}
+
+function event_Watch(input, i){
+
 }

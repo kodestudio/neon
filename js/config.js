@@ -33,6 +33,7 @@ const config_show_push = true;
 const config_show_pull = true;
 const config_show_wiki = true;
 const config_show_fork = true;
+const config_show_watch = true;
 
 // config of custom Data
 const config_customapi = "";
