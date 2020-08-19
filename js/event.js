@@ -120,13 +120,14 @@ function event_Fork(input,i){
     var content = config_style_issue;
     content = content.replace("AvatarUrl", input[i].actor.avatar_url);
     content = content.replace("UserNameValue", ' ' + input[i].actor.login + ' ');
-    content = content.replace("TitleValue", "Forked this repository");
+    content = content.replace("TitleValue", "");
     content = content.replace("BodyValue", "");
     content = content.replace("GitHubValue", "");
+    content = content.replace('<hr class="my-4">', "");
     content = content.replace("20/20/20", input[i].payload.forkee.updated_at);
     content = content.replace("UserUrlValue", input[i].payload.forkee.owner.html_url);
     content = content.replace("UserUrlValue", input[i].payload.forkee.owner.html_url);
-    content = content.replace("ActionValue", "forked");
+    content = content.replace("ActionValue", "forked this repository");
     addList(content);
 }
 
@@ -153,7 +154,7 @@ function event_Push(input, i){
     content = content.replace("TitleValue", "Added " + input[i].payload.commits.length + " commits in this push");
     var temp;
     for (var j = 0; j < input[i].payload.commits.length; j++){
-        var  li = '<li>' + system_convert(input[i].payload.commits[j].message) + '</li>';
+        var  li = '<div class="alert alert-success">' + system_convert(input[i].payload.commits[j].message) + '</div>';
         temp = temp + li;
         //console.log(input[i].payload.commits[j].message);
     }  
@@ -162,5 +163,20 @@ function event_Push(input, i){
 }
 
 function event_Watch(input, i){
-
+    var content = config_style_issue;
+    content = content.replace("AvatarUrl", input[i].actor.avatar_url);
+    content = content.replace("UserNameValue", ' ' + input[i].actor.login + ' ');
+    content = content.replace("TitleValue", "");
+    content = content.replace("BodyValue", "");
+    content = content.replace("GitHubValue", "");
+    content = content.replace('<hr class="my-4">', "");
+    content = content.replace("20/20/20", input[i].created_at);
+    content = content.replace("UserUrlValue","");
+    content = content.replace("UserUrlValue", "");
+    switch (input[i].payload.action ) {
+        case "started":
+            content = content.replace("ActionValue", "gives star");
+        break;
+    }
+    addList(content);
 }
