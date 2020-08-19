@@ -7,7 +7,7 @@
 var page = 0;
 function addList(input){
     var tag = document.createElement("div");
-    tag.className = "card";
+    tag.className = "list-group-item";
     tag.innerHTML = input;
     document.getElementById("list_events").appendChild(tag);
 }
@@ -39,6 +39,10 @@ function event_get(){
                 if (config_show_release) event_Release(obj_events, i);
             break;  
         }
+    }
+    //console.log(obj_events.length);
+    if (obj_events.length == 0){
+        document.getElementById("alert_all").style.display = "block";
     }
     //document.querySelector('img').style.width = "100%";
 }
@@ -95,5 +99,22 @@ function event_Release(input,i){
 }
 
 function event_Push(input, i){
-    
+    var content = config_style_issue;
+    content = content.replace("AvatarUrl", input[i].actor.avatar_url);
+    content = content.replace("UserNameValue", ' ' + input[i].actor.login + ' ');
+    //content = content.replace("TitleValue", input[i].payload.commits[0].message);
+    content = content.replace("GitHubValue", "https://www.github.com");
+    content = content.replace("20/20/20", input[i].created_at);
+    //content = content.replace("UserUrlValue", input[i].payload.issue.user.html_url);
+    //content = content.replace("UserUrlValue", input[i].payload.issue.user.html_url);
+    content = content.replace("ActionValue", "pushed new code");
+    content = content.replace("TitleValue", "Added " + input[i].payload.commits.length + " commits in this push");
+    var temp;
+    for (var j = 0; j< input[i].payload.commits.length; j++){
+        var  li = '<li>' + input[i].payload.commits[j].message + '</li>';
+        temp = temp + li;
+        //console.log(input[i].payload.commits[j].message);
+    }  
+    content = content.replace("BodyValue", temp);
+    addList(content);
 }
