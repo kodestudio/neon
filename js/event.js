@@ -13,41 +13,50 @@ function addList(input){
 }
 
 function event_get(){
-    page++;
-    var obj_events = JSON.parse(GitHub_getEvents.text(page));
-    for (var i = 0; i < obj_events.length; i++){
-        switch (obj_events[i].type){
-            case "IssuesEvent":
-                if (config_show_issues) event_Issue(obj_events, i);
-            break;
-            case "PushEvent":
-                if (config_show_push) event_Push(obj_events, i);
-            break;
-            case  "IssueCommentEvent":
-                if (config_show_isuecomment) event_CommentIssue(obj_events, i);
-            break;
-            case "PullRequestEvent":
-                if (config_show_pull) event_Pull(obj_events, i);
-            break;
-            case "ForkEvent":
-                if (config_show_fork) event_Fork(obj_events, i);
-            break;
-            case "GollumEvent":
-                if (config_show_wiki) event_Gollum(obj_events, i);
-            break;
-            case "ReleaseEvent":
-                if (config_show_release) event_Release(obj_events, i);
-            break;  
-            case "WatchEvent":
-                if (config_show_watch) event_Watch(obj_events, i);
-            break;
+    if (page < 9){
+        page++;
+        var obj_events = JSON.parse(GitHub_getEvents.text(page));
+        for (var i = 0; i < obj_events.length; i++){
+            switch (obj_events[i].type){
+                case "IssuesEvent":
+                    if (config_show_issues) event_Issue(obj_events, i);
+                break;
+                case "PushEvent":
+                    if (config_show_push) event_Push(obj_events, i);
+                break;
+                case  "IssueCommentEvent":
+                    if (config_show_isuecomment) event_CommentIssue(obj_events, i);
+                break;
+                case "PullRequestEvent":
+                    if (config_show_pull) event_Pull(obj_events, i);
+                break;
+                case "ForkEvent":
+                    if (config_show_fork) event_Fork(obj_events, i);
+                break;
+                case "GollumEvent":
+                    if (config_show_wiki) event_Gollum(obj_events, i);
+                break;
+                case "ReleaseEvent":
+                    if (config_show_release) event_Release(obj_events, i);
+                break;  
+                case "WatchEvent":
+                    if (config_show_watch) event_Watch(obj_events, i);
+                break;
+            }
         }
-    }
-    //console.log(obj_events.length);
-    if (obj_events.length == 0){
+        //console.log(obj_events.length);
+        if (obj_events.length == 0){
+            document.getElementById("alert_all").style.display = "block";
+        }
+        //document.querySelector('img').style.width = "100%" 
+    } else {
+        //console.log("full load");
+        /*document.getElementById("dialog_title").innerHTML = "You only can see 10page events";
+        document.getElementById("dialog_content").innerHTML = "hmm";
+        $("#dialog").modal("show");*/
         document.getElementById("alert_all").style.display = "block";
     }
-    //document.querySelector('img').style.width = "100%";
+    
 }
 
 function event_Issue(input, i){
@@ -154,7 +163,21 @@ function event_Gollum(input,i){
 }
 
 function event_Release(input,i){
-
+    var content = config_style_issue;
+    content = content.replace("AvatarUrl", input[i].actor.avatar_url);
+    content = content.replace("UserNameValue", ' ' + input[i].actor.login + ' ');
+    content = content.replace("TitleValue", input[i].payload.release.name);
+    content = content.replace("BodyValue", system_convert(input[i].payload.release.body));
+    content = content.replace("GitHubValue", input[i].payload.release.html_url);
+    content = content.replace("20/20/20", input[i].payload.release.published_at);
+    content = content.replace("UserUrlValue", "");
+    content = content.replace("UserUrlValue", "");
+    if (input[i].payload.release.prerelease == false){
+        content = content.replace("ActionValue", "published new release "+ input[i].payload.release.tag_name);
+    } else {
+        content = content.replace("ActionValue", "published new pre release "+ input[i].payload.release.tag_name);
+    }
+    addList(content);
 }
 
 function event_Push(input, i){
