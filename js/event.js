@@ -163,7 +163,21 @@ function event_Gollum(input,i){
 }
 
 function event_Release(input,i){
-
+    var content = config_style_issue;
+    content = content.replace("AvatarUrl", input[i].actor.avatar_url);
+    content = content.replace("UserNameValue", ' ' + input[i].actor.login + ' ');
+    content = content.replace("TitleValue", input[i].payload.release.name);
+    content = content.replace("BodyValue", system_convert(input[i].payload.release.body));
+    content = content.replace("GitHubValue", input[i].payload.release.html_url);
+    content = content.replace("20/20/20", input[i].payload.release.published_at);
+    content = content.replace("UserUrlValue", "");
+    content = content.replace("UserUrlValue", "");
+    if (input[i].payload.release.prerelease == false){
+        content = content.replace("ActionValue", "published new release "+ input[i].payload.release.tag_name);
+    } else {
+        content = content.replace("ActionValue", "published new pre release "+ input[i].payload.release.tag_name);
+    }
+    addList(content);
 }
 
 function event_Push(input, i){

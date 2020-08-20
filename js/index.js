@@ -10,6 +10,7 @@ function init(){
     */
     //load title
     document.title = config_title;
+    document.getElementById("tweet").href = "https://www.github.com/" + config_parent + "/" + config_repo + "/issues/new";
     info_create();
     event_get();
 }
