@@ -64,7 +64,7 @@ You can contribute to Neon in the following ways:
 - Watch Neon.
 - Create new issues (report bugs/new idea/...).
 - Share Neon to everyone.
-## Donte
+## Donate
 As you know, Neon is a free project and it will remain free. However, maintaining and improving Neon takes a lot of time and money.
 
 So if you enjoy our work and find Neon helpful, please donate.
